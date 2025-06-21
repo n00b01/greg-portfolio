@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #0f172a;
+    color: #f1f5f9;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #38bdf8;
+  }
+  
+  section {
+    margin-top: 40px;
+  }
+  
+  h2 {
+    color: #22d3ee;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #1e293b;
+    color: #cbd5e1;
+  }
+  
