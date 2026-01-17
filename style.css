@@ -51,15 +51,24 @@ section {
   padding: 20px 0;
 }
 
+
 h2 {
   color: #22d3ee;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #1e293b; /* Subtle separator line */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #1e293b;
   padding-bottom: 10px;
-  display: inline-block;
+  display: table; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* --- Project List Styling --- */
+
+.about p {
+  text-align: justify;       
+  text-justify: inter-word;  
+}
+
+
 .project-list {
   padding-left: 20px;
 }
@@ -68,7 +77,11 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* --- Social Media & Contact Styling --- */
+
+.contact .container {
+  text-align: center; 
+}
+
 .contact p {
   margin-bottom: 20px;
   font-size: 1.1em;
@@ -87,8 +100,9 @@ h2 {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-direction: column; /* Stack them vertically */
+  flex-direction: column;
   gap: 15px;
+  align-items: center; 
 }
 
 .social-links li {
@@ -97,7 +111,7 @@ h2 {
 
 .social-links a {
   text-decoration: none;
-  color: #f1f5f9; /* White/Light Grey */
+  color: #f1f5f9;
   font-size: 1.1rem;
   display: inline-flex;
   align-items: center;
@@ -106,12 +120,12 @@ h2 {
 }
 
 .social-links a:hover {
-  color: #38bdf8; /* Highlight color on hover */
+  color: #38bdf8;
 }
 
 .social-links i {
   font-size: 1.3rem;
-  width: 25px; /* Ensures icons align perfectly vertically */
+  width: 25px;
   text-align: center;
 }
 
