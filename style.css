@@ -4,6 +4,7 @@ body {
   background: #0f172a;
   color: #f1f5f9;
   line-height: 1.6;
+  overflow-x: hidden; /* Prevents horizontal scroll from animations */
 }
 
 .container {
@@ -54,7 +55,7 @@ section {
 
 h2 {
   color: #22d3ee;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border-bottom: 2px solid #1e293b;
   padding-bottom: 10px;
   display: table; 
@@ -64,17 +65,40 @@ h2 {
 
 
 .about p {
-  text-align: justify;       
-  text-justify: inter-word;  
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 
 .project-list {
-  padding-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 20px;
+  padding: 0;
+  list-style: none;
 }
 
 .project-list li {
-  margin-bottom: 15px;
+  background: #1e293b; 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #334155; 
+}
+
+/* Hover Effect for Cards */
+.project-list li:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  border-color: #38bdf8;
+}
+
+.project-list strong {
+  display: block; 
+  color: #38bdf8;
+  font-size: 1.1em;
+  margin-bottom: 8px;
 }
 
 
@@ -143,12 +167,27 @@ footer {
   padding: 30px 0;
 }
 
+/* --- Scroll Animation Classes (NEW) --- */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: all 1s ease; 
+  filter: blur(5px); 
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Mobile adjustments */
 @media (max-width: 600px) {
-  h1 {
-      font-size: 2em;
-  }
+  h1 { font-size: 2em; }
+  header p { font-size: 1em; }
   
-  header p {
-      font-size: 1em;
+  /* On mobile, prefer single column for projects */
+  .project-list {
+    grid-template-columns: 1fr; 
   }
 }
