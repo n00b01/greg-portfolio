@@ -18,7 +18,6 @@ header {
   padding: 50px 0;
 }
 
-
 .profile-pic-container {
   width: 200px;
   height: 200px;
@@ -34,7 +33,6 @@ header {
   object-fit: cover;
   object-position: top center; 
 }
-
 
 h1 {
   font-size: 2.5em;
@@ -56,20 +54,68 @@ section {
 h2 {
   color: #22d3ee;
   margin-bottom: 15px;
+  border-bottom: 2px solid #1e293b; /* Subtle separator line */
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
-ul {
+/* --- Project List Styling --- */
+.project-list {
   padding-left: 20px;
 }
 
-li {
-  margin-bottom: 10px;
+.project-list li {
+  margin-bottom: 15px;
 }
 
+/* --- Social Media & Contact Styling --- */
 .contact p {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
 }
 
+.email-link {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Stack them vertically */
+  gap: 15px;
+}
+
+.social-links li {
+  margin: 0;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #f1f5f9; /* White/Light Grey */
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #38bdf8; /* Highlight color on hover */
+}
+
+.social-links i {
+  font-size: 1.3rem;
+  width: 25px; /* Ensures icons align perfectly vertically */
+  text-align: center;
+}
+
+/* --- Footer & Misc --- */
 footer {
   text-align: center;
   padding: 30px 0;
@@ -78,12 +124,10 @@ footer {
   margin-top: 40px;
 }
 
-/* Coffee section styling */
 .Coffee .container {
   text-align: center;
   padding: 30px 0;
 }
-
 
 @media (max-width: 600px) {
   h1 {
