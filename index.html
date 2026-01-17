@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  
   <header>
     <div class="profile-pic-container">
       <img src="assets/profile.jpg" alt="Greg Enos" class="profile-pic"
@@ -20,7 +21,7 @@
     </div>
   </header>
 
-  <section class="about">
+  <section class="about hidden">
     <div class="container">
       <h2>About Me</h2>
       <p>
@@ -31,19 +32,31 @@
     </div>
   </section>
 
-  <section class="projects">
+  <section class="projects hidden">
     <div class="container">
       <h2>Projects</h2>
       <ul class="project-list">
-        <li><strong>Janepher AIBot Backend:</strong> FastAPI + PostgreSQL backend for an AI fashion platform.</li>
-        <li><strong>Inventral Tech:</strong> A full-stack website built with HTML, CSS, JS, Flask, Python, and PostgreSQL.</li>
-        <li><strong>YipitData Mock QA Test:</strong> Data validation project utilizing Excel formulas and SQL.</li>
-        <li><strong>Cyber Prep Toolkit:</strong> Systems analysis and toolkit development.</li>
+        <li>
+          <strong>Janepher AIBot Backend</strong> 
+          FastAPI + PostgreSQL backend for an AI fashion platform.
+        </li>
+        <li>
+          <strong>Inventral Tech</strong> 
+          A full-stack website built with HTML, CSS, JS, Flask, Python, and PostgreSQL.
+        </li>
+        <li>
+          <strong>YipitData Mock QA Test</strong> 
+          Data validation project utilizing Excel formulas and SQL.
+        </li>
+        <li>
+          <strong>Cyber Prep Toolkit</strong> 
+          Systems analysis and toolkit development.
+        </li>
       </ul>
     </div>
   </section>
 
-  <section class="contact">
+  <section class="contact hidden">
     <div class="container">
       <h2>Connect with Me</h2>
       <p>Email: <a href="mailto:gregenos2021@yahoo.com" class="email-link">gregenos2021@yahoo.com</a></p>
@@ -73,7 +86,7 @@
     </div>
   </section>
 
-  <section class="Coffee">
+  <section class="Coffee hidden">
     <div class="container">
       <h2>Support My Work</h2>
       <script
@@ -97,5 +110,19 @@
       <p>© 2025 Greg Enos. Personally built and deployed on Netlify.</p>  
     </div>
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 }); // Triggers when 10% of the element is visible
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+  </script>
+
 </body>
 </html>
