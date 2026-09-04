@@ -4,125 +4,180 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Greg Enos | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  
-  <header>
-    <div class="profile-pic-container">
-      <img src="assets/profile.jpg" alt="Greg Enos" class="profile-pic"
-           onerror="this.style.display='none'; this.parentElement.innerHTML='GE';" />
-    </div>    
 
-    <div>
-      <h1>Greg Enos</h1>
-      <p>Cybersecurity Graduate | Backend Developer (Python, Flask, PostgreSQL) | Networking & Systems Enthusiast</p>
-    </div>
-  </header>
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo">greg<span class="accent">.</span>dev</span>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
 
-  <section class="about hidden">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I am a Backend Developer and Cybersecurity graduate currently pursuing a Bachelor's in Computer Technology at Multimedia University of Kenya.
-        Building on my foundation from Moringa School’s cybersecurity program, I specialize in developing secure, scalable systems with Python, Flask, and PostgreSQL,
-        and I am developing strong skills in networking and Internet infrastructure. I am committed to continuous learning through hands-on projects and certifications,
-        focusing on solving real-world problems with secure, connected systems.
-      </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="profile-pic-container">
+        <img src="assets/profile.jpg" alt="Greg Enos" class="profile-pic"
+             onerror="this.style.display='none'; this.parentElement.classList.add('fallback');" />
+      </div>
+      <div class="hero-text">
+        <p class="hero-greeting">Hey, I'm</p>
+        <h1>Greg Enos</h1>
+        <p class="hero-role">Backend Developer &nbsp;·&nbsp; Cybersecurity &nbsp;·&nbsp; Networking</p>
+        <div class="hero-badges">
+          <span class="badge">🎓 MMU Computer Technology</span>
+          <span class="badge">🔐 Moringa Cybersecurity</span>
+          <span class="badge green">🏢 Syncfusion Attachee</span>
+        </div>
+        <div class="hero-cta">
+          <a href="https://g3tech.vercel.app/" target="_blank" class="btn-primary">View CV</a>
+          <a href="#contact" class="btn-ghost">Get in touch</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="projects hidden">
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
+    <div class="container">
+      <h2>About</h2>
+      <div class="about-body">
+        <p class="about-lead">
+          Curiosity is what got me into tech in the first place — and honestly, it's what keeps me here.
+        </p>
+        <p>
+          I'm Greg, a Computer Technology student at Multimedia University of Kenya with a background in cybersecurity from Moringa School.
+          My interests sit at the intersection of backend development, cybersecurity, and networking. I build projects, dig into documentation,
+          earn the odd certification, and try to document the lessons — and mistakes — along the way on my
+          <a href="https://hashnode.com/@g3tech" target="_blank" class="inline-link">Hashnode blog</a>.
+        </p>
+        <p>
+          This portfolio is a record of that journey. If any of this resonates, let's connect.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section reveal">
     <div class="container">
       <h2>Projects</h2>
-      <ul class="project-list">
-        <li>
-          <strong>Janepher AIBot Backend</strong> 
-          FastAPI + PostgreSQL backend for an AI fashion platform.
-        </li>
-        <li>
-          <strong>Inventral Tech</strong> 
-          A full-stack website built with HTML, CSS, JS, Flask, Python, and PostgreSQL.
-        </li>
-        <li>
-          <strong>YipitData Mock QA Test</strong> 
-          Data validation project utilizing Excel formulas and SQL.
-        </li>
-        <li>
-          <strong>Cyber Prep Toolkit</strong> 
-          Systems analysis and toolkit development.
-        </li>
-      </ul>
+      <div class="project-grid">
+
+        <a href="https://github.com/n00b01/janepher" target="_blank" class="project-card">
+          <div class="project-top">
+            <span class="project-icon">🤖</span>
+            <span class="project-lang">Python · FastAPI</span>
+          </div>
+          <h3>Janepher AI</h3>
+          <p>Backend for an AI-powered fashion platform — FastAPI and PostgreSQL handling conversation logic and data persistence.</p>
+          <span class="project-link">github.com/n00b01/janepher →</span>
+        </a>
+
+        <a href="https://github.com/n00b01/inventral_tech" target="_blank" class="project-card">
+          <div class="project-top">
+            <span class="project-icon">🌐</span>
+            <span class="project-lang">HTML · CSS · Flask</span>
+          </div>
+          <h3>Inventral Tech</h3>
+          <p>Full-stack company website built with Flask and PostgreSQL. Open-sourced to contribute back to the dev community.</p>
+          <span class="project-link">github.com/n00b01/inventral_tech →</span>
+        </a>
+
+        <a href="https://github.com/n00b01/Vigenere_python_cypher" target="_blank" class="project-card">
+          <div class="project-top">
+            <span class="project-icon">🔐</span>
+            <span class="project-lang">Python · Cryptography</span>
+          </div>
+          <h3>Vigenère Cipher</h3>
+          <p>Python implementation of the Vigenère cipher with encryption and decryption — a hands-on dive into classical cryptography.</p>
+          <span class="project-link">github.com/n00b01/Vigenere_python_cypher →</span>
+        </a>
+
+        <a href="https://github.com/n00b01?tab=repositories" target="_blank" class="project-card ghost-card">
+          <div class="project-top">
+            <span class="project-icon">📂</span>
+          </div>
+          <h3>More on GitHub</h3>
+          <p>QA test suites, freeCodeCamp projects, and other experiments in progress.</p>
+          <span class="project-link">github.com/n00b01 →</span>
+        </a>
+
+      </div>
     </div>
   </section>
 
-  <section class="contact hidden">
-    <div class="container">
-      <h2>Connect with Me</h2>
-      <p>Email: <a href="mailto:gregenos2021@yahoo.com" class="email-link">gregenos2021@yahoo.com</a></p>
-      
+  <!-- CONTACT -->
+  <section id="contact" class="section reveal">
+    <div class="container contact-inner">
+      <h2>Contact</h2>
+      <p class="contact-sub">Open to opportunities, collaborations, or just a good conversation about tech.</p>
+      <a href="mailto:gregorenos2021@yahoo.com" class="btn-primary">gregorenos2021@yahoo.com</a>
       <ul class="social-links">
-        <li>
-          <a href="https://www.linkedin.com/in/gregoenos/" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/n00b01" target="_blank">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/gregoenos/" target="_blank">
-            <i class="fab fa-instagram"></i> Instagram
-          </a>
-        </li>
-        <li>
-          <a href="https://x.com/gregoenos" target="_blank">
-            <i class="fab fa-x-twitter"></i> X / Twitter
-          </a>
-        </li>
+        <li><a href="https://www.linkedin.com/in/greg-enos-21b891302/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="https://github.com/n00b01" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+        <li><a href="https://hashnode.com/@g3tech" target="_blank"><i class="fas fa-pen-nib"></i> Hashnode Blog</a></li>
+        <li><a href="https://www.youtube.com/@gregoenos" target="_blank"><i class="fab fa-youtube"></i> YouTube Channel</a></li>
+        <li><a href="https://www.instagram.com/gregoenos/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="https://x.com/gregoenos" target="_blank"><i class="fab fa-x-twitter"></i> X / Twitter</a></li>
       </ul>
     </div>
   </section>
 
-  <section class="Coffee hidden">
-    <div class="container">
-      <h2>Support My Work</h2>
+  <!-- SUPPORT -->
+  <section class="section support reveal">
+    <div class="container support-inner">
+      <p class="support-label">If this work has been useful —</p>
       <script
-        type="text/javascript" 
-        src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" 
-        data-name="bmc-button" 
-        data-slug="grego_enos" 
-        data-color="#FFDD00" 
-        data-emoji="☕" 
-        data-font="Inter" 
-        data-text="Buy me a coffee" 
-        data-outline-color="#000000" 
-        data-font-color="#000000" 
-        data-coffee-color="#ffffff" >
+        type="text/javascript"
+        src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+        data-name="bmc-button"
+        data-slug="grego_enos"
+        data-color="#38bdf8"
+        data-emoji="☕"
+        data-font="Inter"
+        data-text="Buy me a coffee"
+        data-outline-color="#0b1120"
+        data-font-color="#0b1120"
+        data-coffee-color="#0b1120">
       </script>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>© 2025 Greg Enos. Personally built and deployed on Netlify.</p>  
+      <p>© 2026 Greg Enos · Built &amp; deployed on Netlify · <a href="https://g3tech.netlify.app/" class="footer-link">g3tech.netlify.app</a></p>
     </div>
   </footer>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
+          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 }); // Triggers when 10% of the element is visible
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach((el) => observer.observe(el));
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id'); });
+      navLinks.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+    });
   </script>
 
 </body>
